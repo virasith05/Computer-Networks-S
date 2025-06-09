@@ -1,0 +1,169 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4faff;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #0077cc;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  text-align: center;
+  color: #005fa3;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* Team section */
+.members {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.member {
+  text-align: center;
+}
+
+.member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #0077cc;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.member p {
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Assignment Section */
+.question-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.question-card {
+  display: block;
+  padding: 20px;
+  background-color: #eaf4ff;
+  border: 1px solid #c8e4ff;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #003b70;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 119, 204, 0.1);
+}
+
+.question-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 119, 204, 0.2);
+}
+
+.question-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+}
+
+.question-card p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f6f8fa;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+h1, h2 {
+  text-align: center;
+  color: #333;
+}
+
+.team {
+  margin-top: 30px;
+}
+
+.member {
+  background-color: #eef3f7;
+  margin: 15px 0;
+  padding: 15px 20px;
+  border-radius: 8px;
+}
+
+.member p {
+  font-size: 1.1rem;
+  margin: 0 0 10px 0;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #0077cc;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.download-btn:hover {
+  background-color: #005fa3;
+  transform: scale(1.05);
+}
+
+.section {
+  background-color: #eef3f7;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.live-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.live-btn:hover {
+  background-color: #1e7e34;
+  transform: scale(1.05);
+}
