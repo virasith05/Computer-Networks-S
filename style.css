@@ -352,3 +352,23 @@ h1, h2 {
 .sidebar.active + .assignments {
   margin-left: 300px;
 }
+
+@media (max-width: 600px) {
+  .members {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .member {
+    min-width: 0;
+    min-height: 0;
+    padding: 15px 10px;
+  }
+  .member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+  }
+  .member p {
+    font-size: 0.98rem;
+  }
+}
