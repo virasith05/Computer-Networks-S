@@ -32,33 +32,67 @@
       </div>
     </section>
 
-    <section class="assignments">
-      <h2>Assignments</h2>
-      <div class="question-boxes">
-        <a href="q1.html" class="question-card">
-          <h3>Q1)</h3>
-          <p>Create all the topologies discussed in class in Cisco Packet Tracer (CPT).</p>
-        </a>
-        <a href="q2.html" class="question-card">
-          <h3>Q2)</h3>
-          <p>Create 3 LAN networks connected via a single Router (CPT). 
-            <br>
-            Choose appropriate router, connection and configure it. Each LAN network is configured via Tree, Star and Ring topologies respectively. 
-            <br>
-            The IP addresses  for the implementation of topologies should be chosen based on the 5 digits of  your Roll No.
-            <br>
-            Ex: U4ECE220XX      for A batch 
-            <br>
-                U4ECE221XX      for B batch
-                <br>
-            Ex IP address for Roll no 12 (for A and B batch) is:220.12.x.x for A batch and 221.12.x.x for B batch. You may take the subsequent IP addresses based on the mentioned roll number IP. </p>
-        </a>
-        <a href="q3.html" class="question-card">
-          <h3>Q3)</h3>
-          <p>Internet Cafe: Design and simulate an internet cafe using CPT with shared network access.</p>
-        </a>
+    <div class="sidebar-toggle" onclick="toggleSidebar()">
+      <span class="toggle-icon">&#9776;</span>
+    </div>
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h3>Questions</h3>
+        <button class="close-sidebar" onclick="toggleSidebar()">×</button>
       </div>
-    </section>
+      <ul class="question-list">
+        <li><a href="q1.html">Question 1</a></li>
+        <li><a href="q2.html">Question 2</a></li>
+        <li><a href="q3.html">Question 3</a></li>
+      </ul>
+    </div>
   </div>
+  <script>
+    let currentQuestion = 1;
+    const totalQuestions = 3;
+    const questionContainer = document.querySelector('.question-boxes');
+
+    function showQuestion(num) {
+      const offset = (num - 1) * -100;
+      questionContainer.style.transform = `translateX(${offset}%)`;
+      
+      // Update button states
+      document.getElementById('prevBtn').style.opacity = num === 1 ? '0.5' : '1';
+      document.getElementById('nextBtn').style.opacity = num === totalQuestions ? '0.5' : '1';
+
+      // Update active state in sidebar
+      document.querySelectorAll('.question-list li').forEach((li, index) => {
+        li.classList.toggle('active', index + 1 === num);
+      });
+    }
+
+    function nextQuestion() {
+      if (currentQuestion < totalQuestions) {
+        currentQuestion++;
+        showQuestion(currentQuestion);
+      }
+    }
+
+    function prevQuestion() {
+      if (currentQuestion > 1) {
+        currentQuestion--;
+        showQuestion(currentQuestion);
+      }
+    }
+
+    function goToQuestion(num) {
+      currentQuestion = num;
+      showQuestion(num);
+      toggleSidebar(); // Close sidebar after selection
+    }
+
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('active');
+    }
+
+    // Initialize first question
+    showQuestion(1);
+  </script>
 </body>
 </html>
