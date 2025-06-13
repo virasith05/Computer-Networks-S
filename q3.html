@@ -7,6 +7,21 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="sidebar-toggle" onclick="toggleSidebar()">
+    <span class="toggle-icon">&#9776;</span>
+  </div>
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h3>Questions</h3>
+      <button class="close-sidebar" onclick="toggleSidebar()">×</button>
+    </div>
+    <ul class="question-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="q1.html">Question 1</a></li>
+      <li><a href="q2.html">Question 2</a></li>
+      <li><a href="q3.html">Question 3</a></li>
+    </ul>
+  </div>
   <div class="container">
     <h1>Question 3 - Internet Café (Group Project)</h1>
 
@@ -25,5 +40,11 @@
       <a href="https://your-project-link.netlify.app" target="_blank" class="live-btn">Open Website</a>
     </div>
   </div>
+  <script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('active');
+  }
+  </script>
 </body>
 </html>
