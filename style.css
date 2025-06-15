@@ -356,7 +356,7 @@ h1, h2 {
 @media (max-width: 600px) {
   .members {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 10px;
   }
   .member {
     min-width: 0;
